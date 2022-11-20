@@ -81,12 +81,6 @@ namespace TicTacToe_Console_Application
                 zug++;
             }
 
-            if (IsDraw() == true)
-            {
-                Console.WriteLine("It's a Draw!");
-                stillPlaying = false;
-            }
-
             if (IsWinner() == true)
             {
                 if (playerText == "Y")
@@ -100,6 +94,7 @@ namespace TicTacToe_Console_Application
                     stillPlaying = false;
                 }
             }
+
             userNumRight = false;
             if (IsWinner() == !true)
             {
@@ -116,6 +111,12 @@ namespace TicTacToe_Console_Application
                     else
                         Console.WriteLine("This field has already been picked try again.");
                 }
+            }
+
+            if (IsDraw() == true)
+            {
+                Console.WriteLine("It's a Draw!");
+                stillPlaying = false;
             }
 
         }
