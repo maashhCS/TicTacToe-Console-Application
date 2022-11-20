@@ -116,6 +116,7 @@ namespace TicTacToe_Console_Application
             if (IsDraw() == true)
             {
                 Console.WriteLine("It's a Draw!");
+                GameBoard();
                 stillPlaying = false;
             }
 
